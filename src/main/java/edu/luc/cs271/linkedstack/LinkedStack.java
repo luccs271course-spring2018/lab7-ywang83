@@ -49,13 +49,11 @@ public class LinkedStack<E> implements IStack<E> {
     }
   }
 
-    List<E> list = new ArrayList<>();
-
   @Override
   public List<E> asList() {
     // TODO implement using an ArrayList preallocated with the right size
     // TODO add any instance variable(s) required to support this
-
+    List<E> list = new ArrayList<>();
     if (!isEmpty()) {
       list.add(top.data);
       list.add((E) top.next.data);
