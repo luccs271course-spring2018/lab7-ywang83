@@ -17,7 +17,7 @@ Because `LinkedStack` invoked `Node`, which has an explicit constructor.
 ## How else (not using `Node`) could we have implemented `LinkedStack` in such a way that it is still based on a linked list but the `asList` method uses constant time and space?
 We can construct an empty stack using an `LinkedList` as the container. <br>
 `public ListStack() {` <br> 
-`   list = new LinkedList<>();` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;`list = new LinkedList<>();` <br>
 `}`
 
 ## Is it better for `push` and `pop` to return the item or the stack itself? Briefly discuss the pros and cons of each design.
