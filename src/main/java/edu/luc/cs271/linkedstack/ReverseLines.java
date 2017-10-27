@@ -23,7 +23,7 @@ public class ReverseLines {
   private static void printReverse(final Scanner input) {
     // TODO recursively read and print successive input lines until EOF, then print them out in reverse order
   }
-  
+
   private String input;
   private Stack<Character> stack = new Stack<Character>();
 
