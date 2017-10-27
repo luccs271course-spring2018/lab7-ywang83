@@ -8,6 +8,7 @@ public class LinkedStack<E> implements IStack<E> {
 
   /** The topmost node of this stack. The stack gets pushed down from here. */
   private Node<E> top;
+  private int size;
 
   // TODO why don't we need an explicit constructor?
 
@@ -46,15 +47,25 @@ public class LinkedStack<E> implements IStack<E> {
     }
   }
 
-  @Override
-  public List<E> asList() {
-    // TODO implement using an ArrayList preallocated with the right size
-    // TODO add any instance variable(s) required to support this
-    List<E> list = new ArrayList<>();
-    if (!isEmpty()) {
-      list.add(top.data);
-      list.add((E) top.next.data);
+    @Override
+    public List<E> asList() {
+      final ArrayList<E> result = new ArrayList<>(size);
+      populateList(null, result); // TODO replace null with the right reference
+      return result;
     }
-    return list;
+
+  private void populateList(final Node<E> curr, final List<E> result) {
+    // TODO recursively populate the list in the desired order
+  }
+
+  @Override
+  public List<E> asFifoList() {
+    final ArrayList<E> result = new ArrayList<>(size);
+    populateFifoList(null, result); // TODO replace null with the right reference
+    return result;
+  }
+
+  private void populateFifoList(final Node<E> curr, final List<E> result) {
+    // TODO recursively populate the list in the desired order
   }
 }
