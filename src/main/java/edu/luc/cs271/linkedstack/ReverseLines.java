@@ -10,7 +10,8 @@ public class ReverseLines {
   }
 
   private static void printReverse(final Scanner input) {
-    // TODO recursively read and print successive input lines until EOF, then print them out in reverse order
+    // TODO recursively read and print successive input lines until EOF, then print them out in
+    // reverse order
     String str = input.nextLine();
     Stack<String> stack = new Stack<>();
     stack.push(str);
